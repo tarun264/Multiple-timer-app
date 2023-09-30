@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  /* background-color: var(--bgTestClr) !important; */
+}
+
+:root {
+  /* color vars  */
+  --txtClr: white;
+  --btnTxtClr: #34344a;
+  --bgPrimary: #1d1d23;
+  --bgSecondary: #34344a;
+  --btnBgActive: #f0f757;
+  --btnBgSecondary: #39393e;
+  --bgTestClr: rgba(0, 100, 0, 1);
+
+  /* font weights vars 400, 500, 700*/
+  --weightNormal: 400;
+  --weightDarker: 500;
+  --weightDarkest: 700;
+
+  /* font sizes variables 48, 36, 24, 18*/
+  --FS_first: 18px;
+  --FS_second: 22px;
+  --FS_third: 34px;
+  --FS_fourth: 42px;
+}
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--bgPrimary);
+  color: var(--txtClr);
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  width: 55%;
+  margin: auto;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header {
+  /* width: 100%; */
+  padding: 10px;
+  margin-bottom: 15px;
+}
+header > h1 {
+  font-size: var(--FS_third);
+  font-weight: var(--weightDarkest);
+  text-align: center;
+  padding: 5px;
+  margin: 15px;
+}
+
+header > section {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bgSecondary);
+  border-radius: 20px;
+  padding: 25px;
+}
+
+header > section > p {
+  font-size: var(--FS_second);
+  font-weight: var(--weightDarker);
+}
+/* #setTimer_Display{
+    font-size: var(--FS_third);
+    font-weight: var(--weightDarker);
+} */
+
+#setTimer_Display > input,
+#setTimer_Display > label {
+  width: 80px;
+  height: 50px;
+  font-size: var(--FS_third);
+  font-weight: var(--weightDarker);
+  color: var(--txtClr);
+
+  background-color: transparent;
+  border: none;
+}
+#setTimer_Display > input::placeholder {
+  color: var(--txtClr);
+  text-decoration: underline;
+}
+/* #setTimer_Display>input:nth-child(3){
+    width: 80px;
+} */
+
+header > section > button {
+  font-size: var(--FS_first);
+  color: var(--btnTxtClr);
+  font-weight: var(--weightDarker);
+  padding: 10px 40px;
+  border-radius: 25px;
+  background-color: var(--btnBgActive);
+}
+
+/* #Main_section>div:first-child{
+    margin: auto;
+    width: 300px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: var(--btnBgSecondary);
+    text-align: center;
+}
+
+#Main_section>div>h1{
+    font-size: var(--FS_second);
+    font-weight: var(--weightDarker);
+} */
+#Main_section {
+  width: 100%;
+  padding: 10px;
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+#Main_section > h1 {
+  font-size: var(--FS_second);
+  width: fit-content;
+  padding: 10px 25px;
+  background-color: var(--btnBgSecondary);
+  border-radius: 25px;
+  /* margin: auto; */
+  margin-bottom: 10px;
+}
+
+#no_card_container {
+  font-size: var(--FS_second);
+  font-weight: var(--weightDarkest);
+}
+
+.TimerCard {
+  box-sizing: border-box;
+  padding: 25px 25px;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--bgSecondary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.TimerCard > :nth-child(1) {
+  /* background-color: blue; */
+  font-size: var(--FS_second);
+  font-weight: var(--weightDarker);
+}
+
+.TimerCard > :nth-child(2) {
+  /* background-color: blue; */
+  font-size: var(--FS_fourth);
+  font-weight: var(--weightDarker);
+}
+
+.TimerCard > :nth-child(3) {
+  font-size: var(--FS_first);
+  color: var(--btnTxtClr);
+  font-weight: var(--weightDarker);
+  padding: 10px 30px;
+  border-radius: 25px;
+  background-color: var(--btnBgActive);
+}
+
+.TimerCardCompleted {
+  box-sizing: border-box;
+  padding: 25px 25px;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--btnBgActive);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.TimerCardCompleted > button {
+  margin-left: 45px;
+  color: var(--txtClr);
+  background-color: var(--bgSecondary);
+  font-size: var(--FS_first);
+  font-weight: var(--weightDarker);
+  padding: 10px 25px;
+  border-radius: 25px;
+}
+.TimerCardCompleted > h1 {
+  color: var(--btnTxtClr);
+  font-size: var(--FS_fourth);
+  font-weight: var(--weightDarker);
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+@media screen and (max-width: 676px) {
+  :root {
+    --FS_first: 16px;
+    --FS_second: 20px;
+    --FS_third: 30px;
+    --FS_fourth: 36px;
+  }
+  main{
+    /* margin: none; */
+    width: 90%;
+    min-width: 380px;
+    outline: 1px solid red;
+  }
+  header > section{
+    margin: auto;
+    width: 60%;
+    min-width: 340px;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #setTimer_Display{
+    align-self:flex-end;
+  }
+  
+  .TimerCard{
+      padding: 15px 15px;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .TimerCardCompleted{
+    padding: 15px 15px;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .TimerCardCompleted > button {
+  margin-left: 0px;
+
+  }
+}

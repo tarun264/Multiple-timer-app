@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/clock.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Multi-Timers App</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Multiple Timers App</h1>
+        <section id="setTimer">
+          <p>Set Time:</p>
+          <div id="setTimer_Display">
+            <input
+              id="hours"
+              name="hours"
+              type="number"
+              placeholder="hh"
+              min="0"
+            />
+            <label for="minutes">: </label
+            ><input
+              id="minutes"
+              name="minutes"
+              type="number"
+              placeholder="mm"
+              min="0"
+              max="60"
+            />
+            <label for="seconds">: &nbsp;</label
+            ><input
+              id="seconds"
+              name="seconds"
+              type="number"
+              placeholder="ss"
+              min="0"
+              max="60"
+            />
+          </div>
+          <button id="setTimerButton">Set</button>
+        </section>
+      </header>
+      <section id="Main_section">
+        <h1>Current Timers</h1>
+        <div id="no_card_container" class="hide">You have no timers currently!</div>
+    
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
